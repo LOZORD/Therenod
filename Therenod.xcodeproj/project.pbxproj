@@ -10,10 +10,13 @@
 		CDF26E2819E0824800EEA5C1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF26E2719E0824800EEA5C1 /* main.m */; };
 		CDF26E2B19E0824800EEA5C1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF26E2A19E0824800EEA5C1 /* AppDelegate.m */; };
 		CDF26E2E19E0824800EEA5C1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF26E2D19E0824800EEA5C1 /* ViewController.m */; };
-		CDF26E3119E0824800EEA5C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDF26E2F19E0824800EEA5C1 /* Main.storyboard */; };
 		CDF26E3319E0824800EEA5C1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDF26E3219E0824800EEA5C1 /* Images.xcassets */; };
 		CDF26E3619E0824800EEA5C1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDF26E3419E0824800EEA5C1 /* LaunchScreen.xib */; };
 		CDF26E4219E0824900EEA5C1 /* TherenodTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF26E4119E0824900EEA5C1 /* TherenodTests.m */; };
+		CDF26E4C19E0892300EEA5C1 /* OpenSpatial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDF26E4B19E0892300EEA5C1 /* OpenSpatial.framework */; };
+		CDF26E5219E0898600EEA5C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDF26E4D19E0898600EEA5C1 /* Main.storyboard */; };
+		CDF26E5319E0898600EEA5C1 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF26E4F19E0898600EEA5C1 /* MainViewController.m */; };
+		CDF26E5419E0898600EEA5C1 /* RingScanTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF26E5119E0898600EEA5C1 /* RingScanTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,12 +37,17 @@
 		CDF26E2A19E0824800EEA5C1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		CDF26E2C19E0824800EEA5C1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		CDF26E2D19E0824800EEA5C1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		CDF26E3019E0824800EEA5C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CDF26E3219E0824800EEA5C1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CDF26E3519E0824800EEA5C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		CDF26E3B19E0824900EEA5C1 /* TherenodTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TherenodTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDF26E4019E0824900EEA5C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CDF26E4119E0824900EEA5C1 /* TherenodTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TherenodTests.m; sourceTree = "<group>"; };
+		CDF26E4B19E0892300EEA5C1 /* OpenSpatial.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenSpatial.framework; path = "openspatial-iOS-SDK-master/release/OpenSpatial.framework"; sourceTree = "<group>"; };
+		CDF26E4D19E0898600EEA5C1 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = "openspatial-iOS-SDK-master/Example App Source/Main.storyboard"; sourceTree = SOURCE_ROOT; };
+		CDF26E4E19E0898600EEA5C1 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = "openspatial-iOS-SDK-master/Example App Source/MainViewController.h"; sourceTree = SOURCE_ROOT; };
+		CDF26E4F19E0898600EEA5C1 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = "openspatial-iOS-SDK-master/Example App Source/MainViewController.m"; sourceTree = SOURCE_ROOT; };
+		CDF26E5019E0898600EEA5C1 /* RingScanTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RingScanTableViewController.h; path = "openspatial-iOS-SDK-master/Example App Source/RingScanTableViewController.h"; sourceTree = SOURCE_ROOT; };
+		CDF26E5119E0898600EEA5C1 /* RingScanTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RingScanTableViewController.m; path = "openspatial-iOS-SDK-master/Example App Source/RingScanTableViewController.m"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDF26E4C19E0892300EEA5C1 /* OpenSpatial.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +72,7 @@
 		CDF26E1919E0824500EEA5C1 = {
 			isa = PBXGroup;
 			children = (
+				CDF26E4B19E0892300EEA5C1 /* OpenSpatial.framework */,
 				CDF26E2419E0824700EEA5C1 /* Therenod */,
 				CDF26E3E19E0824900EEA5C1 /* TherenodTests */,
 				CDF26E2319E0824700EEA5C1 /* Products */,
@@ -81,11 +91,15 @@
 		CDF26E2419E0824700EEA5C1 /* Therenod */ = {
 			isa = PBXGroup;
 			children = (
+				CDF26E4D19E0898600EEA5C1 /* Main.storyboard */,
+				CDF26E4E19E0898600EEA5C1 /* MainViewController.h */,
+				CDF26E4F19E0898600EEA5C1 /* MainViewController.m */,
+				CDF26E5019E0898600EEA5C1 /* RingScanTableViewController.h */,
+				CDF26E5119E0898600EEA5C1 /* RingScanTableViewController.m */,
 				CDF26E2919E0824800EEA5C1 /* AppDelegate.h */,
 				CDF26E2A19E0824800EEA5C1 /* AppDelegate.m */,
 				CDF26E2C19E0824800EEA5C1 /* ViewController.h */,
 				CDF26E2D19E0824800EEA5C1 /* ViewController.m */,
-				CDF26E2F19E0824800EEA5C1 /* Main.storyboard */,
 				CDF26E3219E0824800EEA5C1 /* Images.xcassets */,
 				CDF26E3419E0824800EEA5C1 /* LaunchScreen.xib */,
 				CDF26E2519E0824800EEA5C1 /* Supporting Files */,
@@ -199,9 +213,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDF26E3119E0824800EEA5C1 /* Main.storyboard in Resources */,
 				CDF26E3619E0824800EEA5C1 /* LaunchScreen.xib in Resources */,
 				CDF26E3319E0824800EEA5C1 /* Images.xcassets in Resources */,
+				CDF26E5219E0898600EEA5C1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,6 +236,8 @@
 				CDF26E2E19E0824800EEA5C1 /* ViewController.m in Sources */,
 				CDF26E2B19E0824800EEA5C1 /* AppDelegate.m in Sources */,
 				CDF26E2819E0824800EEA5C1 /* main.m in Sources */,
+				CDF26E5419E0898600EEA5C1 /* RingScanTableViewController.m in Sources */,
+				CDF26E5319E0898600EEA5C1 /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,14 +260,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		CDF26E2F19E0824800EEA5C1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CDF26E3019E0824800EEA5C1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CDF26E3419E0824800EEA5C1 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -345,6 +353,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/openspatial-iOS-SDK-master/release",
+				);
 				INFOPLIST_FILE = Therenod/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -355,6 +367,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/openspatial-iOS-SDK-master/release",
+				);
 				INFOPLIST_FILE = Therenod/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -414,6 +430,7 @@
 				CDF26E4719E0824900EEA5C1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CDF26E4819E0824900EEA5C1 /* Build configuration list for PBXNativeTarget "TherenodTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +439,7 @@
 				CDF26E4A19E0824900EEA5C1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
