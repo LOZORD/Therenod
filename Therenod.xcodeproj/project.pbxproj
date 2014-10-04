@@ -7,13 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F2956FF19E0971A005B941F /* ButtonEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2956F419E0971A005B941F /* ButtonEvent.m */; };
+		7F29570019E0971A005B941F /* GestureEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2956F619E0971A005B941F /* GestureEvent.m */; };
+		7F29570119E0971A005B941F /* OpenSpatialBluetooth.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2956F819E0971A005B941F /* OpenSpatialBluetooth.m */; };
+		7F29570219E0971A005B941F /* OpenSpatialDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2956FA19E0971A005B941F /* OpenSpatialDecoder.m */; };
+		7F29570319E0971A005B941F /* PointerEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2956FC19E0971A005B941F /* PointerEvent.m */; };
+		7F29570419E0971A005B941F /* RotationEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2956FE19E0971A005B941F /* RotationEvent.m */; };
 		CDF26E2819E0824800EEA5C1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF26E2719E0824800EEA5C1 /* main.m */; };
 		CDF26E2B19E0824800EEA5C1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF26E2A19E0824800EEA5C1 /* AppDelegate.m */; };
 		CDF26E2E19E0824800EEA5C1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF26E2D19E0824800EEA5C1 /* ViewController.m */; };
 		CDF26E3319E0824800EEA5C1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDF26E3219E0824800EEA5C1 /* Images.xcassets */; };
 		CDF26E3619E0824800EEA5C1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDF26E3419E0824800EEA5C1 /* LaunchScreen.xib */; };
 		CDF26E4219E0824900EEA5C1 /* TherenodTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF26E4119E0824900EEA5C1 /* TherenodTests.m */; };
-		CDF26E4C19E0892300EEA5C1 /* OpenSpatial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDF26E4B19E0892300EEA5C1 /* OpenSpatial.framework */; };
 		CDF26E5219E0898600EEA5C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDF26E4D19E0898600EEA5C1 /* Main.storyboard */; };
 		CDF26E5319E0898600EEA5C1 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF26E4F19E0898600EEA5C1 /* MainViewController.m */; };
 		CDF26E5419E0898600EEA5C1 /* RingScanTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF26E5119E0898600EEA5C1 /* RingScanTableViewController.m */; };
@@ -30,6 +35,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7F2956F319E0971A005B941F /* ButtonEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ButtonEvent.h; path = "../../NetBeansProjects/openspatial-iOS-SDK-master/Open Spatial iOS SDK/Open Spatial iOS SDK/ButtonEvent.h"; sourceTree = "<group>"; };
+		7F2956F419E0971A005B941F /* ButtonEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ButtonEvent.m; path = "../../NetBeansProjects/openspatial-iOS-SDK-master/Open Spatial iOS SDK/Open Spatial iOS SDK/ButtonEvent.m"; sourceTree = "<group>"; };
+		7F2956F519E0971A005B941F /* GestureEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GestureEvent.h; path = "../../NetBeansProjects/openspatial-iOS-SDK-master/Open Spatial iOS SDK/Open Spatial iOS SDK/GestureEvent.h"; sourceTree = "<group>"; };
+		7F2956F619E0971A005B941F /* GestureEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GestureEvent.m; path = "../../NetBeansProjects/openspatial-iOS-SDK-master/Open Spatial iOS SDK/Open Spatial iOS SDK/GestureEvent.m"; sourceTree = "<group>"; };
+		7F2956F719E0971A005B941F /* OpenSpatialBluetooth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OpenSpatialBluetooth.h; path = "../../NetBeansProjects/openspatial-iOS-SDK-master/Open Spatial iOS SDK/Open Spatial iOS SDK/OpenSpatialBluetooth.h"; sourceTree = "<group>"; };
+		7F2956F819E0971A005B941F /* OpenSpatialBluetooth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OpenSpatialBluetooth.m; path = "../../NetBeansProjects/openspatial-iOS-SDK-master/Open Spatial iOS SDK/Open Spatial iOS SDK/OpenSpatialBluetooth.m"; sourceTree = "<group>"; };
+		7F2956F919E0971A005B941F /* OpenSpatialDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OpenSpatialDecoder.h; path = "../../NetBeansProjects/openspatial-iOS-SDK-master/Open Spatial iOS SDK/Open Spatial iOS SDK/OpenSpatialDecoder.h"; sourceTree = "<group>"; };
+		7F2956FA19E0971A005B941F /* OpenSpatialDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OpenSpatialDecoder.m; path = "../../NetBeansProjects/openspatial-iOS-SDK-master/Open Spatial iOS SDK/Open Spatial iOS SDK/OpenSpatialDecoder.m"; sourceTree = "<group>"; };
+		7F2956FB19E0971A005B941F /* PointerEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PointerEvent.h; path = "../../NetBeansProjects/openspatial-iOS-SDK-master/Open Spatial iOS SDK/Open Spatial iOS SDK/PointerEvent.h"; sourceTree = "<group>"; };
+		7F2956FC19E0971A005B941F /* PointerEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PointerEvent.m; path = "../../NetBeansProjects/openspatial-iOS-SDK-master/Open Spatial iOS SDK/Open Spatial iOS SDK/PointerEvent.m"; sourceTree = "<group>"; };
+		7F2956FD19E0971A005B941F /* RotationEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RotationEvent.h; path = "../../NetBeansProjects/openspatial-iOS-SDK-master/Open Spatial iOS SDK/Open Spatial iOS SDK/RotationEvent.h"; sourceTree = "<group>"; };
+		7F2956FE19E0971A005B941F /* RotationEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RotationEvent.m; path = "../../NetBeansProjects/openspatial-iOS-SDK-master/Open Spatial iOS SDK/Open Spatial iOS SDK/RotationEvent.m"; sourceTree = "<group>"; };
 		CDF26E2219E0824700EEA5C1 /* Therenod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Therenod.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDF26E2619E0824800EEA5C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CDF26E2719E0824800EEA5C1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -42,7 +59,6 @@
 		CDF26E3B19E0824900EEA5C1 /* TherenodTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TherenodTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDF26E4019E0824900EEA5C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CDF26E4119E0824900EEA5C1 /* TherenodTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TherenodTests.m; sourceTree = "<group>"; };
-		CDF26E4B19E0892300EEA5C1 /* OpenSpatial.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenSpatial.framework; path = "openspatial-iOS-SDK-master/release/OpenSpatial.framework"; sourceTree = "<group>"; };
 		CDF26E4D19E0898600EEA5C1 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = "openspatial-iOS-SDK-master/Example App Source/Main.storyboard"; sourceTree = SOURCE_ROOT; };
 		CDF26E4E19E0898600EEA5C1 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = "openspatial-iOS-SDK-master/Example App Source/MainViewController.h"; sourceTree = SOURCE_ROOT; };
 		CDF26E4F19E0898600EEA5C1 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = "openspatial-iOS-SDK-master/Example App Source/MainViewController.m"; sourceTree = SOURCE_ROOT; };
@@ -55,7 +71,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDF26E4C19E0892300EEA5C1 /* OpenSpatial.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,7 +87,6 @@
 		CDF26E1919E0824500EEA5C1 = {
 			isa = PBXGroup;
 			children = (
-				CDF26E4B19E0892300EEA5C1 /* OpenSpatial.framework */,
 				CDF26E2419E0824700EEA5C1 /* Therenod */,
 				CDF26E3E19E0824900EEA5C1 /* TherenodTests */,
 				CDF26E2319E0824700EEA5C1 /* Products */,
@@ -91,6 +105,18 @@
 		CDF26E2419E0824700EEA5C1 /* Therenod */ = {
 			isa = PBXGroup;
 			children = (
+				7F2956F319E0971A005B941F /* ButtonEvent.h */,
+				7F2956F419E0971A005B941F /* ButtonEvent.m */,
+				7F2956F519E0971A005B941F /* GestureEvent.h */,
+				7F2956F619E0971A005B941F /* GestureEvent.m */,
+				7F2956F719E0971A005B941F /* OpenSpatialBluetooth.h */,
+				7F2956F819E0971A005B941F /* OpenSpatialBluetooth.m */,
+				7F2956F919E0971A005B941F /* OpenSpatialDecoder.h */,
+				7F2956FA19E0971A005B941F /* OpenSpatialDecoder.m */,
+				7F2956FB19E0971A005B941F /* PointerEvent.h */,
+				7F2956FC19E0971A005B941F /* PointerEvent.m */,
+				7F2956FD19E0971A005B941F /* RotationEvent.h */,
+				7F2956FE19E0971A005B941F /* RotationEvent.m */,
 				CDF26E4D19E0898600EEA5C1 /* Main.storyboard */,
 				CDF26E4E19E0898600EEA5C1 /* MainViewController.h */,
 				CDF26E4F19E0898600EEA5C1 /* MainViewController.m */,
@@ -233,11 +259,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F2956FF19E0971A005B941F /* ButtonEvent.m in Sources */,
 				CDF26E2E19E0824800EEA5C1 /* ViewController.m in Sources */,
 				CDF26E2B19E0824800EEA5C1 /* AppDelegate.m in Sources */,
+				7F29570219E0971A005B941F /* OpenSpatialDecoder.m in Sources */,
 				CDF26E2819E0824800EEA5C1 /* main.m in Sources */,
 				CDF26E5419E0898600EEA5C1 /* RingScanTableViewController.m in Sources */,
+				7F29570419E0971A005B941F /* RotationEvent.m in Sources */,
+				7F29570019E0971A005B941F /* GestureEvent.m in Sources */,
 				CDF26E5319E0898600EEA5C1 /* MainViewController.m in Sources */,
+				7F29570319E0971A005B941F /* PointerEvent.m in Sources */,
+				7F29570119E0971A005B941F /* OpenSpatialBluetooth.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +388,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/openspatial-iOS-SDK-master/release",
+					"/Users/ritvikupadhyaya/NetBeansProjects/openspatial-iOS-SDK-master/release",
 				);
 				INFOPLIST_FILE = Therenod/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -370,6 +403,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/openspatial-iOS-SDK-master/release",
+					"/Users/ritvikupadhyaya/NetBeansProjects/openspatial-iOS-SDK-master/release",
 				);
 				INFOPLIST_FILE = Therenod/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
