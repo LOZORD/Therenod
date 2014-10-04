@@ -1,1 +1,5 @@
 *.zip
+Therenod.xcodeproj/project.pbxproj
+Therenod.xcodeproj/project.xcworkspace/xcuserdata/
+
+*/xcuserdata/
