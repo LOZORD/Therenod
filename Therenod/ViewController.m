@@ -16,12 +16,26 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+    [switched addTarget:self
+                      action:@selector(btnSwitched:) forControlEvents:UIControlEventValueChanged];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void)btnSwitched:(id)sender {
+    if(switched.on){
+        NSLog(@"SWITCH IS ON");
+    }else{
+        NSLog(@"SWITCH IS OFF");
+    }
+}
+
+//- (void) playSound {
+//    [[SinePlayer sp ] alloc init]
+//}
 
 @end

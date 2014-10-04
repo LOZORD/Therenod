@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7F2956FF19E0971A005B941F /* ButtonEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2956F419E0971A005B941F /* ButtonEvent.m */; };
-		7F29570019E0971A005B941F /* GestureEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2956F619E0971A005B941F /* GestureEvent.m */; };
-		7F29570119E0971A005B941F /* OpenSpatialBluetooth.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2956F819E0971A005B941F /* OpenSpatialBluetooth.m */; };
-		7F29570219E0971A005B941F /* OpenSpatialDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2956FA19E0971A005B941F /* OpenSpatialDecoder.m */; };
-		7F29570319E0971A005B941F /* PointerEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2956FC19E0971A005B941F /* PointerEvent.m */; };
-		7F29570419E0971A005B941F /* RotationEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2956FE19E0971A005B941F /* RotationEvent.m */; };
+		CDDBF8C219E0A86E000AB82E /* ButtonEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = CDDBF8B719E0A86E000AB82E /* ButtonEvent.m */; };
+		CDDBF8C319E0A86E000AB82E /* GestureEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = CDDBF8B919E0A86E000AB82E /* GestureEvent.m */; };
+		CDDBF8C419E0A86E000AB82E /* OpenSpatialBluetooth.m in Sources */ = {isa = PBXBuildFile; fileRef = CDDBF8BB19E0A86E000AB82E /* OpenSpatialBluetooth.m */; };
+		CDDBF8C519E0A86E000AB82E /* OpenSpatialDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = CDDBF8BD19E0A86E000AB82E /* OpenSpatialDecoder.m */; };
+		CDDBF8C619E0A86E000AB82E /* PointerEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = CDDBF8BF19E0A86E000AB82E /* PointerEvent.m */; };
+		CDDBF8C719E0A86E000AB82E /* RotationEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = CDDBF8C119E0A86E000AB82E /* RotationEvent.m */; };
 		CDF26E2819E0824800EEA5C1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF26E2719E0824800EEA5C1 /* main.m */; };
 		CDF26E2B19E0824800EEA5C1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF26E2A19E0824800EEA5C1 /* AppDelegate.m */; };
 		CDF26E2E19E0824800EEA5C1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF26E2D19E0824800EEA5C1 /* ViewController.m */; };
@@ -35,18 +35,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		7F2956F319E0971A005B941F /* ButtonEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ButtonEvent.h; path = "../../NetBeansProjects/openspatial-iOS-SDK-master/Open Spatial iOS SDK/Open Spatial iOS SDK/ButtonEvent.h"; sourceTree = "<group>"; };
-		7F2956F419E0971A005B941F /* ButtonEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ButtonEvent.m; path = "../../NetBeansProjects/openspatial-iOS-SDK-master/Open Spatial iOS SDK/Open Spatial iOS SDK/ButtonEvent.m"; sourceTree = "<group>"; };
-		7F2956F519E0971A005B941F /* GestureEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GestureEvent.h; path = "../../NetBeansProjects/openspatial-iOS-SDK-master/Open Spatial iOS SDK/Open Spatial iOS SDK/GestureEvent.h"; sourceTree = "<group>"; };
-		7F2956F619E0971A005B941F /* GestureEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GestureEvent.m; path = "../../NetBeansProjects/openspatial-iOS-SDK-master/Open Spatial iOS SDK/Open Spatial iOS SDK/GestureEvent.m"; sourceTree = "<group>"; };
-		7F2956F719E0971A005B941F /* OpenSpatialBluetooth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OpenSpatialBluetooth.h; path = "../../NetBeansProjects/openspatial-iOS-SDK-master/Open Spatial iOS SDK/Open Spatial iOS SDK/OpenSpatialBluetooth.h"; sourceTree = "<group>"; };
-		7F2956F819E0971A005B941F /* OpenSpatialBluetooth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OpenSpatialBluetooth.m; path = "../../NetBeansProjects/openspatial-iOS-SDK-master/Open Spatial iOS SDK/Open Spatial iOS SDK/OpenSpatialBluetooth.m"; sourceTree = "<group>"; };
-		7F2956F919E0971A005B941F /* OpenSpatialDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OpenSpatialDecoder.h; path = "../../NetBeansProjects/openspatial-iOS-SDK-master/Open Spatial iOS SDK/Open Spatial iOS SDK/OpenSpatialDecoder.h"; sourceTree = "<group>"; };
-		7F2956FA19E0971A005B941F /* OpenSpatialDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OpenSpatialDecoder.m; path = "../../NetBeansProjects/openspatial-iOS-SDK-master/Open Spatial iOS SDK/Open Spatial iOS SDK/OpenSpatialDecoder.m"; sourceTree = "<group>"; };
-		7F2956FB19E0971A005B941F /* PointerEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PointerEvent.h; path = "../../NetBeansProjects/openspatial-iOS-SDK-master/Open Spatial iOS SDK/Open Spatial iOS SDK/PointerEvent.h"; sourceTree = "<group>"; };
-		7F2956FC19E0971A005B941F /* PointerEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PointerEvent.m; path = "../../NetBeansProjects/openspatial-iOS-SDK-master/Open Spatial iOS SDK/Open Spatial iOS SDK/PointerEvent.m"; sourceTree = "<group>"; };
-		7F2956FD19E0971A005B941F /* RotationEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RotationEvent.h; path = "../../NetBeansProjects/openspatial-iOS-SDK-master/Open Spatial iOS SDK/Open Spatial iOS SDK/RotationEvent.h"; sourceTree = "<group>"; };
-		7F2956FE19E0971A005B941F /* RotationEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RotationEvent.m; path = "../../NetBeansProjects/openspatial-iOS-SDK-master/Open Spatial iOS SDK/Open Spatial iOS SDK/RotationEvent.m"; sourceTree = "<group>"; };
+		CDDBF8B619E0A86E000AB82E /* ButtonEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ButtonEvent.h; path = "openspatial-iOS-SDK-master/Open Spatial iOS SDK/Open Spatial iOS SDK/ButtonEvent.h"; sourceTree = SOURCE_ROOT; };
+		CDDBF8B719E0A86E000AB82E /* ButtonEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ButtonEvent.m; path = "openspatial-iOS-SDK-master/Open Spatial iOS SDK/Open Spatial iOS SDK/ButtonEvent.m"; sourceTree = SOURCE_ROOT; };
+		CDDBF8B819E0A86E000AB82E /* GestureEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GestureEvent.h; path = "openspatial-iOS-SDK-master/Open Spatial iOS SDK/Open Spatial iOS SDK/GestureEvent.h"; sourceTree = SOURCE_ROOT; };
+		CDDBF8B919E0A86E000AB82E /* GestureEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GestureEvent.m; path = "openspatial-iOS-SDK-master/Open Spatial iOS SDK/Open Spatial iOS SDK/GestureEvent.m"; sourceTree = SOURCE_ROOT; };
+		CDDBF8BA19E0A86E000AB82E /* OpenSpatialBluetooth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OpenSpatialBluetooth.h; path = "openspatial-iOS-SDK-master/Open Spatial iOS SDK/Open Spatial iOS SDK/OpenSpatialBluetooth.h"; sourceTree = SOURCE_ROOT; };
+		CDDBF8BB19E0A86E000AB82E /* OpenSpatialBluetooth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OpenSpatialBluetooth.m; path = "openspatial-iOS-SDK-master/Open Spatial iOS SDK/Open Spatial iOS SDK/OpenSpatialBluetooth.m"; sourceTree = SOURCE_ROOT; };
+		CDDBF8BC19E0A86E000AB82E /* OpenSpatialDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OpenSpatialDecoder.h; path = "openspatial-iOS-SDK-master/Open Spatial iOS SDK/Open Spatial iOS SDK/OpenSpatialDecoder.h"; sourceTree = SOURCE_ROOT; };
+		CDDBF8BD19E0A86E000AB82E /* OpenSpatialDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OpenSpatialDecoder.m; path = "openspatial-iOS-SDK-master/Open Spatial iOS SDK/Open Spatial iOS SDK/OpenSpatialDecoder.m"; sourceTree = SOURCE_ROOT; };
+		CDDBF8BE19E0A86E000AB82E /* PointerEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PointerEvent.h; path = "openspatial-iOS-SDK-master/Open Spatial iOS SDK/Open Spatial iOS SDK/PointerEvent.h"; sourceTree = SOURCE_ROOT; };
+		CDDBF8BF19E0A86E000AB82E /* PointerEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PointerEvent.m; path = "openspatial-iOS-SDK-master/Open Spatial iOS SDK/Open Spatial iOS SDK/PointerEvent.m"; sourceTree = SOURCE_ROOT; };
+		CDDBF8C019E0A86E000AB82E /* RotationEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RotationEvent.h; path = "openspatial-iOS-SDK-master/Open Spatial iOS SDK/Open Spatial iOS SDK/RotationEvent.h"; sourceTree = SOURCE_ROOT; };
+		CDDBF8C119E0A86E000AB82E /* RotationEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RotationEvent.m; path = "openspatial-iOS-SDK-master/Open Spatial iOS SDK/Open Spatial iOS SDK/RotationEvent.m"; sourceTree = SOURCE_ROOT; };
+		CDDBF8C819E0AA10000AB82E /* Therenod-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Therenod-Bridging-Header.h"; sourceTree = "<group>"; };
 		CDF26E2219E0824700EEA5C1 /* Therenod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Therenod.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDF26E2619E0824800EEA5C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CDF26E2719E0824800EEA5C1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -105,18 +106,18 @@
 		CDF26E2419E0824700EEA5C1 /* Therenod */ = {
 			isa = PBXGroup;
 			children = (
-				7F2956F319E0971A005B941F /* ButtonEvent.h */,
-				7F2956F419E0971A005B941F /* ButtonEvent.m */,
-				7F2956F519E0971A005B941F /* GestureEvent.h */,
-				7F2956F619E0971A005B941F /* GestureEvent.m */,
-				7F2956F719E0971A005B941F /* OpenSpatialBluetooth.h */,
-				7F2956F819E0971A005B941F /* OpenSpatialBluetooth.m */,
-				7F2956F919E0971A005B941F /* OpenSpatialDecoder.h */,
-				7F2956FA19E0971A005B941F /* OpenSpatialDecoder.m */,
-				7F2956FB19E0971A005B941F /* PointerEvent.h */,
-				7F2956FC19E0971A005B941F /* PointerEvent.m */,
-				7F2956FD19E0971A005B941F /* RotationEvent.h */,
-				7F2956FE19E0971A005B941F /* RotationEvent.m */,
+				CDDBF8B619E0A86E000AB82E /* ButtonEvent.h */,
+				CDDBF8B719E0A86E000AB82E /* ButtonEvent.m */,
+				CDDBF8B819E0A86E000AB82E /* GestureEvent.h */,
+				CDDBF8B919E0A86E000AB82E /* GestureEvent.m */,
+				CDDBF8BA19E0A86E000AB82E /* OpenSpatialBluetooth.h */,
+				CDDBF8BB19E0A86E000AB82E /* OpenSpatialBluetooth.m */,
+				CDDBF8BC19E0A86E000AB82E /* OpenSpatialDecoder.h */,
+				CDDBF8BD19E0A86E000AB82E /* OpenSpatialDecoder.m */,
+				CDDBF8BE19E0A86E000AB82E /* PointerEvent.h */,
+				CDDBF8BF19E0A86E000AB82E /* PointerEvent.m */,
+				CDDBF8C019E0A86E000AB82E /* RotationEvent.h */,
+				CDDBF8C119E0A86E000AB82E /* RotationEvent.m */,
 				CDF26E4D19E0898600EEA5C1 /* Main.storyboard */,
 				CDF26E4E19E0898600EEA5C1 /* MainViewController.h */,
 				CDF26E4F19E0898600EEA5C1 /* MainViewController.m */,
@@ -129,6 +130,7 @@
 				CDF26E3219E0824800EEA5C1 /* Images.xcassets */,
 				CDF26E3419E0824800EEA5C1 /* LaunchScreen.xib */,
 				CDF26E2519E0824800EEA5C1 /* Supporting Files */,
+				CDDBF8C819E0AA10000AB82E /* Therenod-Bridging-Header.h */,
 			);
 			path = Therenod;
 			sourceTree = "<group>";
@@ -259,17 +261,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F2956FF19E0971A005B941F /* ButtonEvent.m in Sources */,
+				CDDBF8C219E0A86E000AB82E /* ButtonEvent.m in Sources */,
 				CDF26E2E19E0824800EEA5C1 /* ViewController.m in Sources */,
 				CDF26E2B19E0824800EEA5C1 /* AppDelegate.m in Sources */,
-				7F29570219E0971A005B941F /* OpenSpatialDecoder.m in Sources */,
+				CDDBF8C519E0A86E000AB82E /* OpenSpatialDecoder.m in Sources */,
 				CDF26E2819E0824800EEA5C1 /* main.m in Sources */,
 				CDF26E5419E0898600EEA5C1 /* RingScanTableViewController.m in Sources */,
-				7F29570419E0971A005B941F /* RotationEvent.m in Sources */,
-				7F29570019E0971A005B941F /* GestureEvent.m in Sources */,
+				CDDBF8C719E0A86E000AB82E /* RotationEvent.m in Sources */,
+				CDDBF8C319E0A86E000AB82E /* GestureEvent.m in Sources */,
 				CDF26E5319E0898600EEA5C1 /* MainViewController.m in Sources */,
-				7F29570319E0971A005B941F /* PointerEvent.m in Sources */,
-				7F29570119E0971A005B941F /* OpenSpatialBluetooth.m in Sources */,
+				CDDBF8C619E0A86E000AB82E /* PointerEvent.m in Sources */,
+				CDDBF8C419E0A86E000AB82E /* OpenSpatialBluetooth.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,6 +387,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/openspatial-iOS-SDK-master/release",
@@ -393,6 +396,8 @@
 				INFOPLIST_FILE = Therenod/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Therenod/Therenod-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -400,6 +405,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/openspatial-iOS-SDK-master/release",
@@ -408,6 +414,7 @@
 				INFOPLIST_FILE = Therenod/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Therenod/Therenod-Bridging-Header.h";
 			};
 			name = Release;
 		};
