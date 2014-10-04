@@ -145,7 +145,7 @@
                                     <segue destination="vXZ-lx-hvc" kind="modal" id="OHe-Lb-Zv9"/>
                                 </connections>
                             </button>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ad9-9m-YlZ">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ad9-9m-YlZ">
                                 <rect key="frame" x="131" y="302" width="51" height="31"/>
                             </switch>
                         </subviews>

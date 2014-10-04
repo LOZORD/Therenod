@@ -13,6 +13,7 @@
 		CDDBF8C519E0A86E000AB82E /* OpenSpatialDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = CDDBF8BD19E0A86E000AB82E /* OpenSpatialDecoder.m */; };
 		CDDBF8C619E0A86E000AB82E /* PointerEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = CDDBF8BF19E0A86E000AB82E /* PointerEvent.m */; };
 		CDDBF8C719E0A86E000AB82E /* RotationEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = CDDBF8C119E0A86E000AB82E /* RotationEvent.m */; };
+		CDDBF8D419E0B8C3000AB82E /* SinePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDBF8D319E0B8C3000AB82E /* SinePlayer.swift */; };
 		CDF26E2819E0824800EEA5C1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF26E2719E0824800EEA5C1 /* main.m */; };
 		CDF26E2B19E0824800EEA5C1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF26E2A19E0824800EEA5C1 /* AppDelegate.m */; };
 		CDF26E2E19E0824800EEA5C1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF26E2D19E0824800EEA5C1 /* ViewController.m */; };
@@ -48,6 +49,7 @@
 		CDDBF8C019E0A86E000AB82E /* RotationEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RotationEvent.h; path = "openspatial-iOS-SDK-master/Open Spatial iOS SDK/Open Spatial iOS SDK/RotationEvent.h"; sourceTree = SOURCE_ROOT; };
 		CDDBF8C119E0A86E000AB82E /* RotationEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RotationEvent.m; path = "openspatial-iOS-SDK-master/Open Spatial iOS SDK/Open Spatial iOS SDK/RotationEvent.m"; sourceTree = SOURCE_ROOT; };
 		CDDBF8C819E0AA10000AB82E /* Therenod-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Therenod-Bridging-Header.h"; sourceTree = "<group>"; };
+		CDDBF8D319E0B8C3000AB82E /* SinePlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SinePlayer.swift; sourceTree = "<group>"; };
 		CDF26E2219E0824700EEA5C1 /* Therenod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Therenod.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDF26E2619E0824800EEA5C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CDF26E2719E0824800EEA5C1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				CDF26E2C19E0824800EEA5C1 /* ViewController.h */,
 				CDF26E2D19E0824800EEA5C1 /* ViewController.m */,
 				CDF26E3219E0824800EEA5C1 /* Images.xcassets */,
+				CDDBF8D319E0B8C3000AB82E /* SinePlayer.swift */,
 				CDF26E3419E0824800EEA5C1 /* LaunchScreen.xib */,
 				CDF26E2519E0824800EEA5C1 /* Supporting Files */,
 				CDDBF8C819E0AA10000AB82E /* Therenod-Bridging-Header.h */,
@@ -268,6 +271,7 @@
 				CDF26E2819E0824800EEA5C1 /* main.m in Sources */,
 				CDF26E5419E0898600EEA5C1 /* RingScanTableViewController.m in Sources */,
 				CDDBF8C719E0A86E000AB82E /* RotationEvent.m in Sources */,
+				CDDBF8D419E0B8C3000AB82E /* SinePlayer.swift in Sources */,
 				CDDBF8C319E0A86E000AB82E /* GestureEvent.m in Sources */,
 				CDF26E5319E0898600EEA5C1 /* MainViewController.m in Sources */,
 				CDDBF8C619E0A86E000AB82E /* PointerEvent.m in Sources */,
