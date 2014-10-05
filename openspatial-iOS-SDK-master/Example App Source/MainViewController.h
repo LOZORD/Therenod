@@ -12,11 +12,12 @@
 
 @interface MainViewController : UIViewController <OpenSpatialBluetoothDelegate>{
 
+    TGSineWaveToneGenerator * tgs;
+    
     @public
-        float xPos;
-        float yPos;
+        short int xPos;
+        short int yPos;
     BOOL should_play;
-TGSineWaveToneGenerator * tgs;
 }
 @property OpenSpatialBluetooth *HIDServ;
 @property CBPeripheral *lastNodPeripheral;

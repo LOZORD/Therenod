@@ -128,7 +128,7 @@ uint8_t mode = POINTER_MODE;
 }
 
 //LEO' CONVERTERS
-- (float) _NodUnitToHumanUnit:(float)ndu
+- (float) _NodUnitToHumanUnit:(short int)ndu
 {
     return ndu/1.50;
 }
@@ -157,20 +157,6 @@ uint8_t mode = POINTER_MODE;
     [self.HIDServ subscribeToPointerEvents:self.lastNodPeripheral.name];
     [self.HIDServ subscribeToRotationEvents:self.lastNodPeripheral.name];
 }
-//FIXME!!!
-/*
-- (float) TGUnitToHumanUnit:(float)tgu {
-    //    return 72.1248 * log2f(0.0042 * tgu);
-    return .151623 * tgu - 33.5;
-}
-- (float) TGVolumeUnittoHuman: (float)tgv{
-    return tgv*100/11;
-}
-- (float) NodUnitToHumanUnit: (float)ndu{
-    return ndu/1.50;
-}
-*/
-
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
@@ -208,6 +194,11 @@ uint8_t mode = POINTER_MODE;
 }
 - (void) stopSound {
     [tgs stop];
+}
+- (IBAction)beginTherenod:(id)sender {
+    should_play = true;
+    xPos = yPos = 0;
+    //NSLog(@"LETS GOOOOOOOOO");
 }
 
 @end

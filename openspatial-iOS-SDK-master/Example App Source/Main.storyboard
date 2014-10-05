@@ -73,8 +73,8 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="beginTherenod:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="bbH-a7-KJq"/>
                                     <action selector="subscribeEvents:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="oTh-RP-aVG"/>
-                                    <segue destination="E8E-Io-EmV" kind="modal" id="qgd-wP-j3s"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -115,54 +115,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9kL-MV-42d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="649" y="110"/>
-        </scene>
-        <!--Therenod Launcher-->
-        <scene sceneID="sK3-zO-taU">
-            <objects>
-                <viewController id="E8E-Io-EmV" customClass="TherenodLauncher" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="S1g-zQ-0EO"/>
-                        <viewControllerLayoutGuide type="bottom" id="yjN-mu-9Rn"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="E5v-2r-nqd">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please place the middle segment of your Nod finger on circle to Rock Out" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGI-Ll-RLa">
-                                <rect key="frame" x="52" y="28" width="217" height="125"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="idd-f8-J9U">
-                                <rect key="frame" x="124" y="269" width="73" height="30"/>
-                                <state key="normal" title="Press here">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="launchTherenod:" destination="E8E-Io-EmV" eventType="touchUpInside" id="Ci0-oh-wAh"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zhm-lv-fXJ">
-                                <rect key="frame" x="143" y="530" width="35" height="30"/>
-                                <state key="normal" title="Back">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="vXZ-lx-hvc" kind="modal" id="nLh-n1-3W7"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <gestureRecognizers/>
-                    </view>
-                    <connections>
-                        <outlet property="launchThereminBtn" destination="idd-f8-J9U" id="0S2-Rp-2KU"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hOl-ke-Csc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-439" y="574"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="mxw-dB-alj">
