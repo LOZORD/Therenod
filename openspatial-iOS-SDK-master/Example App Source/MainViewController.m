@@ -10,6 +10,7 @@
 #import "ViewController.h"
 
 @interface MainViewController ()
+@property (weak, nonatomic) IBOutlet UIButton *button;
 
 @end
 
@@ -198,7 +199,16 @@ uint8_t mode = POINTER_MODE;
 - (IBAction)beginTherenod:(id)sender {
     should_play = true;
     xPos = yPos = 0;
-    //NSLog(@"LETS GOOOOOOOOO");
+    [UIView animateWithDuration:0.3
+                     animations:^{
+                         _button.transform = CGAffineTransformMakeScale(1.5, 1.5);
+                     }
+                     completion:NULL];
+    [UIView animateWithDuration:0.3
+                     animations:^{
+                         _button.transform = CGAffineTransformMakeScale(1.0, 1.0);
+                     }
+                     completion:NULL];
 }
 
 @end
