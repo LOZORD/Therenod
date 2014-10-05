@@ -8,9 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import "OpenSpatialBluetooth.h"
+#import "TGSineWaveToneGenerator.h"
 
-@interface MainViewController : UIViewController <OpenSpatialBluetoothDelegate>
+@interface MainViewController : UIViewController <OpenSpatialBluetoothDelegate>{
 
+    @public
+        float xPos;
+        float yPos;
+    BOOL should_play;
+TGSineWaveToneGenerator * tgs;
+}
 @property OpenSpatialBluetooth *HIDServ;
 @property CBPeripheral *lastNodPeripheral;
 

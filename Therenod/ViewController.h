@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "TGSineWaveToneGenerator.h"
+#import "MainViewController.h"
 
 
 @interface ViewController : UIViewController{
@@ -16,13 +17,16 @@
     __weak IBOutlet UISlider *volume_slider;
 
     //global tone generator object
-    TGSineWaveToneGenerator * tg;
-
+    TGSineWaveToneGenerator * tgs;
+    
+@public
     float pitch;
     float volume;
     BOOL should_play;
 
     //(IBAction)pitch_slider
 }
+-(IBAction) switchValueChanged;
+-(IBAction) toggleButtonPressed;
 @end
 

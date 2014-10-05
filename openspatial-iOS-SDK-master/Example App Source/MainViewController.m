@@ -7,6 +7,7 @@
 //
 
 #import "MainViewController.h"
+#import "ViewController.h"
 
 @interface MainViewController ()
 
@@ -27,8 +28,11 @@ uint8_t mode = POINTER_MODE;
 
 - (void)viewDidLoad
 {
+    
     self.HIDServ = [OpenSpatialBluetooth sharedBluetoothServ];
     self.HIDServ.delegate = self;
+    xPos = 0.0f;
+    yPos = 0.0f;
     [super viewDidLoad];
 }
 
@@ -98,63 +102,34 @@ uint8_t mode = POINTER_MODE;
     NSLog(@"This is the y value of the pointer event from %@", [pointerEvent.peripheral name]);
     NSLog(@"%hd", [pointerEvent getYValue]);
     
-    return nil;
-}
-
--(GestureEvent *)gestureEventFired: (GestureEvent *) gestureEvent
-{
-    NSLog(@"This is the value of gesture event type from %@", [gestureEvent.peripheral name]);
-    switch([gestureEvent getGestureEventType])
-    {
-        case SWIPE_UP:
-            NSLog(@"Gesture Up");
-            break;
-        case SWIPE_DOWN:
-            NSLog(@"Gesture Down");
-            break;
-        case SWIPE_LEFT:
-            NSLog(@"Gesture Left");
-            break;
-        case SWIPE_RIGHT:
-            NSLog(@"Gesture Right");
-            break;
-        case SLIDER_LEFT:
-            NSLog(@"Slider Left");
-            break;
-        case SLIDER_RIGHT:
-            NSLog(@"Slider Right");
-            break;
-        case CCW:
-            NSLog(@"Counter Clockwise");
-            break;
-        case CW:
-            NSLog(@"Clockwise");
-            break;
+    yPos += [self NodUnitToHumanUnit:[pointerEvent getYValue]];
+    if (yPos > 200) {
+        yPos = 200;
     }
+    if (yPos < 0) {
+        yPos = 0;
+    }
+    xPos += [pointerEvent getXValue];
+    if (xPos > 100) {
+        xPos = 100;
+    }
+    if(xPos< 0){
+        xPos = 0;
+    }
+    [self playSoundWithPitch:xPos withVolume:yPos];
     
-    return nil;
-}
+//    //FIXME!!!
+//    - (float) TGUnitToHumanUnit:(float)tgu {
+//        //    return 72.1248 * log2f(0.0042 * tgu);
+//        return .151623 * tgu - 33.5;
+//    }
+//    - (float) TGVolumeUnittoHuman: (float)tgv{
+//        return tgv*100/11;
+//    }
+//    - (float) NodUnitToHumanUnit: (float)ndu{
+//        return ndu/1.50;
+//    }
 
--(RotationEvent *)rotationEventFired:(RotationEvent *)rotationEvent
-{
-    NSLog(@"This is the x value of the quaternion from %@", [rotationEvent.peripheral name]);
-    NSLog(@"%f", rotationEvent.x);
-    
-    NSLog(@"This is the y value of the quaternion from %@", [rotationEvent.peripheral name]);
-    NSLog(@"%f", rotationEvent.y);
-
-    NSLog(@"This is the z value of the quaternion from %@", [rotationEvent.peripheral name]);
-    NSLog(@"%f", rotationEvent.z);
-
-    NSLog(@"This is the roll value of the quaternion from %@", [rotationEvent.peripheral name]);
-    NSLog(@"%f", rotationEvent.roll);
-
-    NSLog(@"This is the pitch value of the quaternion from %@", [rotationEvent.peripheral name]);
-    NSLog(@"%f", rotationEvent.pitch);
-
-    NSLog(@"This is the yaw value of the quaternion from %@", [rotationEvent.peripheral name]);
-    NSLog(@"%f", rotationEvent.yaw);
-    
     return nil;
 }
 
@@ -171,6 +146,57 @@ uint8_t mode = POINTER_MODE;
     [self.HIDServ subscribeToGestureEvents:self.lastNodPeripheral.name];
     [self.HIDServ subscribeToPointerEvents:self.lastNodPeripheral.name];
     [self.HIDServ subscribeToRotationEvents:self.lastNodPeripheral.name];
+}
+//FIXME!!!
+- (float) TGUnitToHumanUnit:(float)tgu {
+    //    return 72.1248 * log2f(0.0042 * tgu);
+    return .151623 * tgu - 33.5;
+}
+- (float) TGVolumeUnittoHuman: (float)tgv{
+    return tgv*100/11;
+}
+- (float) NodUnitToHumanUnit: (float)ndu{
+    return ndu/1.50;
+}
+
+
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"trans1"])
+    {
+        MainViewController *OrigMvc = self;
+        ViewController * vc =(ViewController*)[segue destinationViewController];
+    }
+}
+- (void) playSoundWithPitch:(float)p withVolume:(float)v {
+    //[self stopSound]; //otherwise it break :'(
+    should_play = YES;
+    if (should_play)
+    {
+        static TGSineWaveToneGenerator * tgs = nil;
+
+        //if we have't initialized the tg yet, create it
+        if (tgs == nil)
+        {
+            tgs = [[TGSineWaveToneGenerator alloc] initWithFrequency:p amplitude:v];
+        }
+        //otherwise, update the values
+        else
+        {
+            tgs->frequency = p;
+            tgs->amplitude = v;
+        }
+        
+        [tgs play];
+    }
+    else
+    {
+        [self stopSound];
+    }
+}
+- (void) stopSound {
+    [tgs stop];
 }
 
 @end
