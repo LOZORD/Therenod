@@ -126,9 +126,15 @@
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="pitch_sl" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="220" minValue="220" maxValue="880" translatesAutoresizingMaskIntoConstraints="NO" id="rxY-3K-kau">
                                 <rect key="frame" x="108" y="109" width="118" height="31"/>
+                                <connections>
+                                    <action selector="pitch_slider:" destination="cfD-5t-mDb" eventType="valueChanged" id="w8Z-J5-Gwf"/>
+                                </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="vol_sl" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="11" translatesAutoresizingMaskIntoConstraints="NO" id="Rzd-J8-tqN">
                                 <rect key="frame" x="108" y="201" width="118" height="31"/>
+                                <connections>
+                                    <action selector="volume_slider:" destination="cfD-5t-mDb" eventType="valueChanged" id="VQY-VC-HtM"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Play" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sVF-xA-vqO">
                                 <rect key="frame" x="139" y="273" width="33" height="21"/>

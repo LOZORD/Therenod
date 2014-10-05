@@ -17,6 +17,12 @@
 
     //global tone generator object
     TGSineWaveToneGenerator * tg;
+
+    float pitch;
+    float volume;
+    BOOL should_play;
+
+    //(IBAction)pitch_slider
 }
 @end
 

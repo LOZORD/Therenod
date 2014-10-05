@@ -28,28 +28,49 @@
 }
 
 - (void)btnSwitched:(id)sender {
-    if(switched.on){
-        NSLog(@"SWITCH IS ON");
-        float pitch = pitch_slider.value;
-        float volume = volume_slider.value;
-        [self playSoundWithPitch:pitch withVolume:volume];
-    }else{
-        NSLog(@"SWITCH IS OFF");
-        [self stopSound];
-    }
+//    if(switched.on){
+//        NSLog(@"SWITCH IS ON");
+//        pitch = pitch_slider.value;
+//        volume = volume_slider.value;
+//        [self playSoundWithPitch:pitch withVolume:volume];
+//    }else{
+//        NSLog(@"SWITCH IS OFF");
+//        [self stopSound];
+//    }
+
+    should_play = switched.on;
+    [self playSoundWithPitch:pitch withVolume:volume];
 }
 
 - (void) playSoundWithPitch:(float)p withVolume:(float)v {
-    tg = [[TGSineWaveToneGenerator alloc] initWithFrequency:p amplitude:v];
+    [self stopSound]; //otherwise it break :'(
 
-    [tg play];
+    if (should_play)
+    {
+        tg = [[TGSineWaveToneGenerator alloc] initWithFrequency:p amplitude:v];
+
+        [tg play];
+    }
+    else
+    {
+        [self stopSound];
+    }
 }
 
 - (void) stopSound {
     [tg stop];
 }
+- (IBAction)pitch_slider:(id)sender {
+    NSLog(@"YOLOSWAG--p");
+    pitch = pitch_slider.value;
+    [self playSoundWithPitch:pitch withVolume:volume];
+}
 
-
+- (IBAction)volume_slider:(id)sender {
+    NSLog(@"YOLOSWAG--v");
+    volume = volume_slider.value;
+    [self playSoundWithPitch:pitch withVolume:volume];
+}
 
 
 @end
