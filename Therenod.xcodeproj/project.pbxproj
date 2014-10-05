@@ -14,6 +14,7 @@
 		CDDBF8C619E0A86E000AB82E /* PointerEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = CDDBF8BF19E0A86E000AB82E /* PointerEvent.m */; };
 		CDDBF8C719E0A86E000AB82E /* RotationEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = CDDBF8C119E0A86E000AB82E /* RotationEvent.m */; };
 		CDDBF8D419E0B8C3000AB82E /* SinePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDBF8D319E0B8C3000AB82E /* SinePlayer.swift */; };
+		CDDBF8E219E0ECB5000AB82E /* TGSineWaveToneGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = CDDBF8E119E0ECB5000AB82E /* TGSineWaveToneGenerator.m */; };
 		CDF26E2819E0824800EEA5C1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF26E2719E0824800EEA5C1 /* main.m */; };
 		CDF26E2B19E0824800EEA5C1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF26E2A19E0824800EEA5C1 /* AppDelegate.m */; };
 		CDF26E2E19E0824800EEA5C1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF26E2D19E0824800EEA5C1 /* ViewController.m */; };
@@ -50,6 +51,8 @@
 		CDDBF8C119E0A86E000AB82E /* RotationEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RotationEvent.m; path = "openspatial-iOS-SDK-master/Open Spatial iOS SDK/Open Spatial iOS SDK/RotationEvent.m"; sourceTree = SOURCE_ROOT; };
 		CDDBF8C819E0AA10000AB82E /* Therenod-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Therenod-Bridging-Header.h"; sourceTree = "<group>"; };
 		CDDBF8D319E0B8C3000AB82E /* SinePlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SinePlayer.swift; sourceTree = "<group>"; };
+		CDDBF8E019E0ECB4000AB82E /* TGSineWaveToneGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGSineWaveToneGenerator.h; sourceTree = "<group>"; };
+		CDDBF8E119E0ECB5000AB82E /* TGSineWaveToneGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGSineWaveToneGenerator.m; sourceTree = "<group>"; };
 		CDF26E2219E0824700EEA5C1 /* Therenod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Therenod.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDF26E2619E0824800EEA5C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CDF26E2719E0824800EEA5C1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -121,6 +124,8 @@
 				CDDBF8C019E0A86E000AB82E /* RotationEvent.h */,
 				CDDBF8C119E0A86E000AB82E /* RotationEvent.m */,
 				CDF26E4D19E0898600EEA5C1 /* Main.storyboard */,
+				CDDBF8E019E0ECB4000AB82E /* TGSineWaveToneGenerator.h */,
+				CDDBF8E119E0ECB5000AB82E /* TGSineWaveToneGenerator.m */,
 				CDF26E4E19E0898600EEA5C1 /* MainViewController.h */,
 				CDF26E4F19E0898600EEA5C1 /* MainViewController.m */,
 				CDF26E5019E0898600EEA5C1 /* RingScanTableViewController.h */,
@@ -269,6 +274,7 @@
 				CDF26E2B19E0824800EEA5C1 /* AppDelegate.m in Sources */,
 				CDDBF8C519E0A86E000AB82E /* OpenSpatialDecoder.m in Sources */,
 				CDF26E2819E0824800EEA5C1 /* main.m in Sources */,
+				CDDBF8E219E0ECB5000AB82E /* TGSineWaveToneGenerator.m in Sources */,
 				CDF26E5419E0898600EEA5C1 /* RingScanTableViewController.m in Sources */,
 				CDDBF8C719E0A86E000AB82E /* RotationEvent.m in Sources */,
 				CDDBF8D419E0B8C3000AB82E /* SinePlayer.swift in Sources */,
