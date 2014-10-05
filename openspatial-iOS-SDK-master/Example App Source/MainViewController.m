@@ -122,7 +122,15 @@ uint8_t mode = POINTER_MODE;
     float tguPitch  = [self HumanPitchToTGPitch:[self _NodUnitToHumanUnit:xPos]];
     float tguVolume = [self HumanVolumeToTGVolume:[self _NodUnitToHumanUnit:yPos]];
     
-    [self playSoundWithPitch:tguPitch withVolume:tguVolume];
+    if (take_update)
+    {
+        take_update = false;
+        [self playSoundWithPitch:tguPitch withVolume:tguVolume];
+    }
+    else
+    {
+        take_update = true;
+    }
     
     
     return nil;
@@ -198,6 +206,7 @@ uint8_t mode = POINTER_MODE;
 }
 - (IBAction)beginTherenod:(id)sender {
     should_play = true;
+    take_update = true;
     xPos = yPos = 0;
     [UIView animateWithDuration:0.3
                      animations:^{

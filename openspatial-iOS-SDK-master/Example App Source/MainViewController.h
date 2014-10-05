@@ -18,6 +18,7 @@
         short int xPos;
         short int yPos;
     BOOL should_play;
+    BOOL take_update;
 }
 @property OpenSpatialBluetooth *HIDServ;
 @property CBPeripheral *lastNodPeripheral;
