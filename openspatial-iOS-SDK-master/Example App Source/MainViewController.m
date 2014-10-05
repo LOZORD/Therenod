@@ -102,35 +102,45 @@ uint8_t mode = POINTER_MODE;
     NSLog(@"This is the y value of the pointer event from %@", [pointerEvent.peripheral name]);
     NSLog(@"%hd", [pointerEvent getYValue]);
     
-    yPos += [self NodUnitToHumanUnit:[pointerEvent getYValue]];
-    if (yPos > 200) {
-        yPos = 200;
+    //yPos += [self NodUnitToHumanUnit:[pointerEvent getYValue]];
+    yPos += [pointerEvent getYValue];
+    if (yPos > 150) {
+        yPos = 150;
     }
-    if (yPos < 0) {
+    else if (yPos < 0) {
         yPos = 0;
     }
     xPos += [pointerEvent getXValue];
-    if (xPos > 100) {
-        xPos = 100;
+    if (xPos > 150) {
+        xPos = 150;
     }
-    if(xPos< 0){
+    else if(xPos < 0){
         xPos = 0;
     }
-    [self playSoundWithPitch:xPos withVolume:yPos];
     
-//    //FIXME!!!
-//    - (float) TGUnitToHumanUnit:(float)tgu {
-//        //    return 72.1248 * log2f(0.0042 * tgu);
-//        return .151623 * tgu - 33.5;
-//    }
-//    - (float) TGVolumeUnittoHuman: (float)tgv{
-//        return tgv*100/11;
-//    }
-//    - (float) NodUnitToHumanUnit: (float)ndu{
-//        return ndu/1.50;
-//    }
-
+    float tguPitch  = [self HumanPitchToTGPitch:[self _NodUnitToHumanUnit:xPos]];
+    float tguVolume = [self HumanVolumeToTGVolume:[self _NodUnitToHumanUnit:yPos]];
+    
+    [self playSoundWithPitch:tguPitch withVolume:tguVolume];
+    
+    
     return nil;
+}
+
+//LEO' CONVERTERS
+- (float) _NodUnitToHumanUnit:(float)ndu
+{
+    return ndu/1.50;
+}
+
+- (float) HumanPitchToTGPitch:(float)hup
+{
+    return ((hup)/100) * 660 +220;
+}
+
+- (float) HumanVolumeToTGVolume:(float)hup
+{
+    return (hup/11.0) * 100.0;
 }
 
 - (void) didConnectToNod: (CBPeripheral*) peripheral
@@ -148,6 +158,7 @@ uint8_t mode = POINTER_MODE;
     [self.HIDServ subscribeToRotationEvents:self.lastNodPeripheral.name];
 }
 //FIXME!!!
+/*
 - (float) TGUnitToHumanUnit:(float)tgu {
     //    return 72.1248 * log2f(0.0042 * tgu);
     return .151623 * tgu - 33.5;
@@ -158,7 +169,7 @@ uint8_t mode = POINTER_MODE;
 - (float) NodUnitToHumanUnit: (float)ndu{
     return ndu/1.50;
 }
-
+*/
 
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

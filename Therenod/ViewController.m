@@ -113,7 +113,7 @@
     pitch = pitch_slider.value;
     [[NSUserDefaults standardUserDefaults] setFloat:pitch forKey:@"pitch"];
     [[NSUserDefaults standardUserDefaults] synchronize];
-    NSLog(@"\n\n%f\n", pitch);
+    NSLog(@"\n\n%f pitch\n", pitch);
     [self playSoundWithPitch:pitch withVolume:volume];
     
 }
@@ -123,7 +123,7 @@
     [[NSUserDefaults standardUserDefaults] setFloat:volume forKey:@"volume"];
     [[NSUserDefaults standardUserDefaults] synchronize];
     [self playSoundWithPitch:pitch withVolume:volume];
-    NSLog(@"\n\n%f\n", volume);
+    NSLog(@"\n\n%f volume\n", volume);
 }
 
 - (float) HumanUnitToTGUnit:(float)hup {
