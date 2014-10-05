@@ -10,6 +10,8 @@
 
 @interface ViewController : UIViewController{
     __weak IBOutlet UISwitch *switched;
+    __weak IBOutlet UISlider *pitch_slider;
+    __weak IBOutlet UISlider *volume_slider;
 }
 @end
 

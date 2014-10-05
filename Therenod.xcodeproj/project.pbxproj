@@ -395,7 +395,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/openspatial-iOS-SDK-master/release",
-					"/Users/ritvikupadhyaya/NetBeansProjects/openspatial-iOS-SDK-master/release",
 				);
 				INFOPLIST_FILE = Therenod/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -413,7 +412,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/openspatial-iOS-SDK-master/release",
-					"/Users/ritvikupadhyaya/NetBeansProjects/openspatial-iOS-SDK-master/release",
 				);
 				INFOPLIST_FILE = Therenod/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

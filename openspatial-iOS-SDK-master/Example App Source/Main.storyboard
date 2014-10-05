@@ -152,7 +152,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="pitch_slider" destination="rxY-3K-kau" id="41r-cM-9hE"/>
                         <outlet property="switched" destination="ad9-9m-YlZ" id="t7g-ST-jee"/>
+                        <outlet property="volume_slider" destination="Rzd-J8-tqN" id="teD-aO-5Oe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S4Y-fh-EdK" userLabel="First Responder" sceneMemberID="firstResponder"/>
