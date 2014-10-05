@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "TGSineWaveToneGenerator.h"
 
 @interface ViewController ()
 
@@ -29,14 +30,18 @@
 - (void)btnSwitched:(id)sender {
     if(switched.on){
         NSLog(@"SWITCH IS ON");
+        float pitch = pitch_slider.value;
+        float volume = volume_slider.value;
+        [self playSoundWithPitch:pitch withVolume:volume];
     }else{
         NSLog(@"SWITCH IS OFF");
     }
 }
 
-//- (void) playSound {
+- (void) playSoundWithPitch:(float)p withVolume:(float)v {
 //    [[SinePlayer sp ] alloc init]
-//}
+    NSLog(@"YOLOSWAG");
+}
 
 
 
