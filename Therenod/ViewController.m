@@ -72,6 +72,11 @@
 }
 - (IBAction)pitch_slider:(id)sender {
     pitch = pitch_slider.value;
+    NSLog(@"\n\n%f\n\n", pitch);
+//    float f = [self HumanUnitToTGUnit:pitch];
+    float human_unit = [self TGUnitToHumanUnit:pitch];
+
+    NSLog(@"\n\n\%f\n\n", human_unit);
     [self playSoundWithPitch:pitch withVolume:volume];
 }
 
@@ -80,5 +85,13 @@
     [self playSoundWithPitch:pitch withVolume:volume];
 }
 
+- (float) HumanUnitToTGUnit:(float)hup {
+    return 265.075 * exp(0.0120 * hup);
+}
+
+//FIXME!!!
+- (float) TGUnitToHumanUnit:(float)tgu {
+    return 72.1248 * log2f(0.0042 * tgu);
+}
 
 @end

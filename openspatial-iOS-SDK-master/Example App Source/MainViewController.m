@@ -85,7 +85,9 @@ uint8_t mode = POINTER_MODE;
     
     return nil;
 }
-
+//- (float) HumanUnitToTGUnit:(float)hup {
+//    return 265.075 * exp(0.0120 * hup);
+//}
 -(PointerEvent *)pointerEventFired: (PointerEvent *) pointerEvent
 {
     
