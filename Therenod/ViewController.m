@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "TGSineWaveToneGenerator.h"
+//#import "TGSineWaveToneGenerator.h"
 
 @interface ViewController ()
 
@@ -35,12 +35,18 @@
         [self playSoundWithPitch:pitch withVolume:volume];
     }else{
         NSLog(@"SWITCH IS OFF");
+        [self stopSound];
     }
 }
 
 - (void) playSoundWithPitch:(float)p withVolume:(float)v {
-//    [[SinePlayer sp ] alloc init]
-    NSLog(@"YOLOSWAG");
+    tg = [[TGSineWaveToneGenerator alloc] initWithFrequency:p amplitude:v];
+
+    [tg play];
+}
+
+- (void) stopSound {
+    [tg stop];
 }
 
 
