@@ -36,6 +36,8 @@ uint8_t mode = POINTER_MODE;
     self.HIDServ.delegate = self;
     xPos = 0.0f;
     yPos = 0.0f;
+    xSum = 0;
+    ySum = 0;
     self.time = [[Timer alloc] init];
     
     [super viewDidLoad];
@@ -99,15 +101,8 @@ uint8_t mode = POINTER_MODE;
 //}
 -(PointerEvent *)pointerEventFired: (PointerEvent *) pointerEvent
 {
-    self.numEvents++;
-    int blah = self.numEvents;
-    if(self.numEvents  == 1000)
-    {
-        [self.time stopTimer];
-        double blah1 = [self.time timeElapsedInMilliseconds];
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"%d",blah] message:[NSString stringWithFormat:@"%f",blah1] delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Say Hello",nil];
-        [alert show];
-    }
+    int myNumEvents = self.numEvents;
+    
     NSLog(@"This is the x value of the pointer event from %@", [pointerEvent.peripheral name]);
     NSLog(@"%hd", [pointerEvent getXValue]);
     
@@ -131,21 +126,25 @@ uint8_t mode = POINTER_MODE;
         xPos = 0;
     }
     
-    float tguPitch  = [self HumanPitchToTGPitch:[self _NodUnitToHumanUnit:xPos]];
-    float tguVolume = [self HumanVolumeToTGVolume:[self _NodUnitToHumanUnit:yPos]];
+    xSum += xPos;
+    ySum += yPos;
     
-    [self playSoundWithPitch:tguPitch withVolume:100.0];
+    //if we've summed 5 change vectors, send it for an update
+    //this is done for smoothing reasons
+    if (myNumEvents % 5 == 0)
+    {
+        float tguPitch  = [self HumanPitchToTGPitch:[self _NodUnitToHumanUnit:xSum]];
+        float tguVolume = [self HumanVolumeToTGVolume:[self _NodUnitToHumanUnit:ySum]];
+        
+        [self playSoundWithPitch:tguPitch withVolume:100.0];
+        
+        //then reset the sums
+        xSum = ySum = 0;
+    }
     
-//    if (take_update)
-//    {
-//        take_update = false;
-//        [self playSoundWithPitch:tguPitch withVolume:tguVolume];
-//    }
-//    else
-//    {
-//        take_update = true;
-//    }
-    
+    //we want to start with an intial sound
+    //increment last (0 % 4 == 0)
+    self.numEvents++;
     
     return nil;
 }
