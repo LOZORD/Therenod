@@ -92,6 +92,7 @@ void ToneInterruptionListener(void *inClientData, UInt32 inInterruptionState)
 
 - (void)playForDuration:(float)time
 {
+    //time = 100.0;
     [self play];
     [self performSelector:@selector(stop) withObject:nil afterDelay:time];
 }

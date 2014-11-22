@@ -210,7 +210,7 @@ uint8_t mode = POINTER_MODE;
             tgs->amplitude = v;
         }
         
-        [tgs play];
+        //----------was there-------------[tgs play];
     }
     else
     {
