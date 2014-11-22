@@ -122,21 +122,25 @@ uint8_t mode = POINTER_MODE;
     float tguPitch  = [self HumanPitchToTGPitch:[self _NodUnitToHumanUnit:xPos]];
     float tguVolume = [self HumanVolumeToTGVolume:[self _NodUnitToHumanUnit:yPos]];
     
-    if (take_update)
-    {
-        take_update = false;
-        [self playSoundWithPitch:tguPitch withVolume:tguVolume];
-    }
-    else
-    {
-        take_update = true;
-    }
+    [self playSoundWithPitch:440.0 withVolume:tguVolume];
+    
+//    if (take_update)
+//    {
+//        take_update = false;
+//        [self playSoundWithPitch:tguPitch withVolume:tguVolume];
+//    }
+//    else
+//    {
+//        take_update = true;
+//    }
     
     
     return nil;
 }
 
 //LEO' CONVERTERS
+//nod = nod distance unit
+//huX = human unit (pitch|volume)
 - (float) _NodUnitToHumanUnit:(short int)ndu
 {
     return ndu/1.50;
