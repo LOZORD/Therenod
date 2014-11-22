@@ -134,7 +134,7 @@ uint8_t mode = POINTER_MODE;
     float tguPitch  = [self HumanPitchToTGPitch:[self _NodUnitToHumanUnit:xPos]];
     float tguVolume = [self HumanVolumeToTGVolume:[self _NodUnitToHumanUnit:yPos]];
     
-    [self playSoundWithPitch:440.0 withVolume:tguVolume];
+    [self playSoundWithPitch:tguPitch withVolume:100.0];
     
 //    if (take_update)
 //    {
@@ -210,7 +210,7 @@ uint8_t mode = POINTER_MODE;
             tgs->amplitude = v;
         }
         
-        //----------was there-------------[tgs play];
+        [tgs play];
     }
     else
     {
