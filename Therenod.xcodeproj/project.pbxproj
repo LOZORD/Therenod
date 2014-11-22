@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		42F8A1351A2128B7000D631B /* Timer.m in Sources */ = {isa = PBXBuildFile; fileRef = 42F8A1341A2128B7000D631B /* Timer.m */; };
 		CDDBF8C219E0A86E000AB82E /* ButtonEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = CDDBF8B719E0A86E000AB82E /* ButtonEvent.m */; };
 		CDDBF8C319E0A86E000AB82E /* GestureEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = CDDBF8B919E0A86E000AB82E /* GestureEvent.m */; };
 		CDDBF8C419E0A86E000AB82E /* OpenSpatialBluetooth.m in Sources */ = {isa = PBXBuildFile; fileRef = CDDBF8BB19E0A86E000AB82E /* OpenSpatialBluetooth.m */; };
@@ -37,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		42F8A1341A2128B7000D631B /* Timer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Timer.m; sourceTree = "<group>"; };
+		42F8A1361A2128DD000D631B /* Timer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Timer.h; sourceTree = "<group>"; };
 		CDDBF8B619E0A86E000AB82E /* ButtonEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ButtonEvent.h; path = "openspatial-iOS-SDK-master/Open Spatial iOS SDK/Open Spatial iOS SDK/ButtonEvent.h"; sourceTree = SOURCE_ROOT; };
 		CDDBF8B719E0A86E000AB82E /* ButtonEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ButtonEvent.m; path = "openspatial-iOS-SDK-master/Open Spatial iOS SDK/Open Spatial iOS SDK/ButtonEvent.m"; sourceTree = SOURCE_ROOT; };
 		CDDBF8B819E0A86E000AB82E /* GestureEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GestureEvent.h; path = "openspatial-iOS-SDK-master/Open Spatial iOS SDK/Open Spatial iOS SDK/GestureEvent.h"; sourceTree = SOURCE_ROOT; };
@@ -148,6 +151,8 @@
 		CDF26E2519E0824800EEA5C1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				42F8A1341A2128B7000D631B /* Timer.m */,
+				42F8A1361A2128DD000D631B /* Timer.h */,
 				CDF26E2619E0824800EEA5C1 /* Info.plist */,
 				CDF26E2719E0824800EEA5C1 /* main.m */,
 			);
@@ -284,6 +289,7 @@
 				CDF26E5319E0898600EEA5C1 /* MainViewController.m in Sources */,
 				CDDBF8C619E0A86E000AB82E /* PointerEvent.m in Sources */,
 				CDDBF8C419E0A86E000AB82E /* OpenSpatialBluetooth.m in Sources */,
+				42F8A1351A2128B7000D631B /* Timer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

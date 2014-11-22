@@ -22,6 +22,7 @@
 }
 @property OpenSpatialBluetooth *HIDServ;
 @property CBPeripheral *lastNodPeripheral;
+@property int numEvents;
 
 -(void) startLoop;
 

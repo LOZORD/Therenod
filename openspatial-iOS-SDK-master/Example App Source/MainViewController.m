@@ -8,9 +8,11 @@
 
 #import "MainViewController.h"
 #import "ViewController.h"
+#import "Timer.h"
 
 @interface MainViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *button;
+@property Timer *time;
 
 @end
 
@@ -34,6 +36,8 @@ uint8_t mode = POINTER_MODE;
     self.HIDServ.delegate = self;
     xPos = 0.0f;
     yPos = 0.0f;
+    self.time = [[Timer alloc] init];
+    
     [super viewDidLoad];
 }
 
@@ -95,7 +99,15 @@ uint8_t mode = POINTER_MODE;
 //}
 -(PointerEvent *)pointerEventFired: (PointerEvent *) pointerEvent
 {
-    
+    self.numEvents++;
+    int blah = self.numEvents;
+    if(self.numEvents  == 1000)
+    {
+        [self.time stopTimer];
+        double blah1 = [self.time timeElapsedInMilliseconds];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"%d",blah] message:[NSString stringWithFormat:@"%f",blah1] delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Say Hello",nil];
+        [alert show];
+    }
     NSLog(@"This is the x value of the pointer event from %@", [pointerEvent.peripheral name]);
     NSLog(@"%hd", [pointerEvent getXValue]);
     
@@ -204,6 +216,7 @@ uint8_t mode = POINTER_MODE;
     {
         [self stopSound];
     }
+    NSLog(@"---------////////----------------Number of events:%d",self.numEvents);
 }
 - (void) stopSound {
     [tgs stop];
@@ -212,6 +225,7 @@ uint8_t mode = POINTER_MODE;
     should_play = true;
     take_update = true;
     xPos = yPos = 0;
+    [self.time startTimer];
     [UIView animateWithDuration:0.3
                      animations:^{
                          _button.transform = CGAffineTransformMakeScale(1.5, 1.5);
