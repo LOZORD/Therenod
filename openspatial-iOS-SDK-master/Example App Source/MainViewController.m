@@ -111,14 +111,14 @@ uint8_t mode = POINTER_MODE;
     NSLog(@"%hd", [pointerEvent getYValue]);
     
     //yPos += [self NodUnitToHumanUnit:[pointerEvent getYValue]];
-    yPos += [pointerEvent getYValue];
+    yPos += ([pointerEvent getYValue])/2;
     if (yPos > 150) {
         yPos = 150;
     }
     else if (yPos < 0) {
         yPos = 0;
     }
-    xPos += [pointerEvent getXValue];
+    xPos += ([pointerEvent getXValue]/2);
     if (xPos > 150) {
         xPos = 150;
     }
@@ -129,9 +129,9 @@ uint8_t mode = POINTER_MODE;
     xSum += xPos;
     ySum += yPos;
     
-    //if we've summed 5 change vectors, send it for an update
+    //if we've summed 3 change vectors, send it for an update
     //this is done for smoothing reasons
-    if (myNumEvents % 5 == 0)
+    if (myNumEvents % 3 == 0)
     {
         float tguPitch  = [self HumanPitchToTGPitch:[self _NodUnitToHumanUnit:xSum]];
         float tguVolume = [self HumanVolumeToTGVolume:[self _NodUnitToHumanUnit:ySum]];
