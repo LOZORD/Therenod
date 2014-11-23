@@ -27,8 +27,10 @@
 
 - (void)viewDidLoad
 {
+    
     [self loadInitialData];
     [super viewDidLoad];
+    
 }
 
 /*

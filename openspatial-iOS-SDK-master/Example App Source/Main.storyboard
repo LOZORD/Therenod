@@ -174,10 +174,11 @@
                             <outlet property="delegate" destination="Gjx-oz-MGf" id="Puk-lU-XDZ"/>
                         </connections>
                     </tableView>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9kL-MV-42d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="649" y="110"/>
+            <point key="canvasLocation" x="627" y="90"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="mxw-dB-alj">
