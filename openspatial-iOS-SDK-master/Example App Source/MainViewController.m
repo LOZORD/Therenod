@@ -101,10 +101,8 @@ uint8_t mode = POINTER_MODE;
 //}
 -(PointerEvent *)pointerEventFired: (PointerEvent *) pointerEvent
 {
-    self.numEvents++;
-    [self.time stopTimer];
-    int blah = self.numEvents;
-    double blah1 = [self.time timeElapsedInMilliseconds];
+    int myNumEvents = self.numEvents;
+    
     NSLog(@"This is the x value of the pointer event from %@", [pointerEvent.peripheral name]);
     NSLog(@"%hd", [pointerEvent getXValue]);
     
@@ -113,35 +111,36 @@ uint8_t mode = POINTER_MODE;
     NSLog(@"%hd", [pointerEvent getYValue]);
     
     //yPos += [self NodUnitToHumanUnit:[pointerEvent getYValue]];
-    yPos += [pointerEvent getYValue];
-    if (yPos > 300) {
-        yPos = 300;
+    yPos += ([pointerEvent getYValue])/2;
+    if (yPos > 150) {
+        yPos = 150;
     }
     else if (yPos < 0) {
         yPos = 0;
     }
-    xPos += [pointerEvent getXValue];
-    if (xPos > 300) {
-        xPos = 300;
+    xPos += ([pointerEvent getXValue]/2);
+    if (xPos > 150) {
+        xPos = 150;
     }
     else if(xPos < 0){
         xPos = 0;
     }
     
-    float tguPitch  = [self HumanPitchToTGPitch:[self _NodUnitToHumanUnit:xPos]];
-    float tguVolume = [self HumanVolumeToTGVolume:[self _NodUnitToHumanUnit:yPos]];
+    xSum += xPos;
+    ySum += yPos;
     
-    [self playSoundWithPitch:tguPitch withVolume:100.0];
-    [self.time startTimer];
-//    if (take_update)
-//    {
-//        take_update = false;
-//        [self playSoundWithPitch:tguPitch withVolume:tguVolume];
-//    }
-//    else
-//    {
-//        take_update = true;
-//    }
+    //if we've summed 3 change vectors, send it for an update
+    //this is done for smoothing reasons
+    if (myNumEvents % 3 == 0)
+    {
+        float tguPitch  = [self HumanPitchToTGPitch:[self _NodUnitToHumanUnit:xSum]];
+        float tguVolume = [self HumanVolumeToTGVolume:[self _NodUnitToHumanUnit:ySum]];
+        
+        [self playSoundWithPitch:tguPitch withVolume:100.0];
+        
+        //then reset the sums
+        xSum = ySum = 0;
+    }
     
     //we want to start with an intial sound
     //increment last (0 % 4 == 0)
@@ -155,7 +154,7 @@ uint8_t mode = POINTER_MODE;
 //huX = human unit (pitch|volume)
 - (float) _NodUnitToHumanUnit:(short int)ndu
 {
-    return ndu/3.00;
+    return ndu/1.50;
 }
 
 - (float) HumanPitchToTGPitch:(float)hup
@@ -225,6 +224,7 @@ uint8_t mode = POINTER_MODE;
     should_play = true;
     take_update = true;
     xPos = yPos = 0;
+    [self.time startTimer];
     [UIView animateWithDuration:0.3
                      animations:^{
                          _button.transform = CGAffineTransformMakeScale(1.5, 1.5);
