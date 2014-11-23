@@ -13,20 +13,79 @@
 @interface MainViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *button;
 @property Timer *time;
-#define CHUNK_SIZE 2
+@property NSArray * DISCRETE_NOTES;
+#define CHUNK_SIZE 3
 @end
 
 @implementation MainViewController
+//@synthesize DISCRETE_NOTES;
 
 uint8_t mode = POINTER_MODE;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
+    [self initDISCRETE_NOTES];
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
     }
+
     return self;
+}
+
+- (void) initDISCRETE_NOTES
+{
+    self.DISCRETE_NOTES = @[
+        @(110.00),
+        @(116.54f),
+        @(123.47f),
+        @(130.81f),
+        @(138.59f),
+        @(146.83f),
+        @(155.56f),
+        @(164.81f),
+        @(174.61f),
+        @(185.0f),
+        @(196.0f),
+        @(207.65f),
+        @(220.0f),
+        @(233.08f),
+        @(246.94f),
+        @(261.63f),
+        @(277.18f),
+        @(293.66f),
+        @(311.13f),
+        @(329.63f),
+        @(349.23f),
+        @(369.99f),
+        @(392.0f),
+        @(415.3f),
+        @(440.0f),
+        @(466.16f),
+        @(493.88f),
+        @(523.25f),
+        @(554.37f),
+        @(587.33f),
+        @(622.25f),
+        @(659.26f),
+        @(698.46f),
+        @(739.99f),
+        @(783.99f),
+        @(830.61f),
+        @(880.0f),
+        @(932.33f),
+        @(987.77f),
+        @(1046.5f),
+        @(1108.73f),
+        @(1174.66f),
+        @(1244.51f),
+        @(1318.51f),
+        @(1396.91f),
+        @(1479.98f),
+        @(1568.00f),
+        @(1661.20f),
+        @(1760.00f)
+    ];
 }
 
 - (void)viewDidLoad
@@ -38,6 +97,7 @@ uint8_t mode = POINTER_MODE;
     yPos = 0.0f;
     xSum = 0;
     ySum = 0;
+    pitchIndex = 0;
     self.time = [[Timer alloc] init];
     
     [super viewDidLoad];
@@ -111,32 +171,37 @@ uint8_t mode = POINTER_MODE;
     NSLog(@"%hd", [pointerEvent getYValue]);
     
     //yPos += [self NodUnitToHumanUnit:[pointerEvent getYValue]];
-    yPos += ([pointerEvent getYValue])/2;
-    if (yPos > 150) {
-        yPos = 150;
-    }
-    else if (yPos < 0) {
-        yPos = 0;
-    }
-    xPos += ([pointerEvent getXValue]/2);
-    if (xPos > 150) {
-        xPos = 150;
-    }
-    else if(xPos < 0){
-        xPos = 0;
-    }
     
-    xSum += xPos;
-    ySum += yPos;
+    
+    //we just want -1 or 1 updates
+    yPos += ([pointerEvent getYValue]);
+    xPos += ([pointerEvent getXValue]);
+    
+    xSum += [self unitize:xPos];
+    ySum += [self unitize:yPos];
+    
+    
     
     //if we've summed CHUNK_SIZE change vectors, send it for an update
     //this is done for smoothing reasons
     if (myNumEvents % CHUNK_SIZE == 0)
     {
-        int adjX = xSum / CHUNK_SIZE;
-        int adjY = ySum / CHUNK_SIZE;
-        float tguPitch  = [self HumanPitchToTGPitch:[self _NodUnitToHumanUnit:adjX]];
-        float tguVolume = [self HumanVolumeToTGVolume:[self _NodUnitToHumanUnit:adjY]];
+        //int adjX = xSum / CHUNK_SIZE;
+        //int adjY = ySum / CHUNK_SIZE;
+        
+        if (xSum + pitchIndex < 0 || xSum + pitchIndex > [self.DISCRETE_NOTES count])
+        {
+            //do nothing
+        }
+        else
+        {
+            pitchIndex += xSum;
+        }
+        
+        int newPitch = [self.DISCRETE_NOTES objectAtIndex:pitchIndex];
+        
+        float tguPitch  = [self HumanPitchToTGPitch:[self _NodUnitToHumanUnit:newPitch]];
+        float tguVolume = [self HumanVolumeToTGVolume:[self _NodUnitToHumanUnit:100]];
         
         [self playSoundWithPitch:tguPitch withVolume:100.0];
         
@@ -149,6 +214,22 @@ uint8_t mode = POINTER_MODE;
     self.numEvents++;
     
     return nil;
+}
+
+- (int) unitize:(int) num
+{
+    if (num > 0)
+    {
+        return 1;
+    }
+    else if (num < 0)
+    {
+        return -1;
+    }
+    else
+    {
+        return 0;
+    }
 }
 
 //LEO' CONVERTERS
