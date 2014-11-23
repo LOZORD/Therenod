@@ -36,6 +36,8 @@ uint8_t mode = POINTER_MODE;
     self.HIDServ.delegate = self;
     xPos = 0.0f;
     yPos = 0.0f;
+    xSum = 0;
+    ySum = 0;
     self.time = [[Timer alloc] init];
     
     [super viewDidLoad];
@@ -141,6 +143,9 @@ uint8_t mode = POINTER_MODE;
 //        take_update = true;
 //    }
     
+    //we want to start with an intial sound
+    //increment last (0 % 4 == 0)
+    self.numEvents++;
     
     return nil;
 }

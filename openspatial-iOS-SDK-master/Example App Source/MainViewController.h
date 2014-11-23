@@ -17,6 +17,8 @@
     @public
         short int xPos;
         short int yPos;
+        int xSum;
+        int ySum;
     BOOL should_play;
     BOOL take_update;
 }
