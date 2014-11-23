@@ -98,10 +98,10 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="Gjx-oz-MGf" kind="modal" id="EuN-zF-onb"/>
+                                    <segue destination="Gjx-oz-MGf" kind="modal" modalTransitionStyle="crossDissolve" id="EuN-zF-onb"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" alpha="0.89999999999999991" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dya-QR-Dy4">
+                            <button opaque="NO" alpha="0.89999999999999991" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dya-QR-Dy4">
                                 <rect key="frame" x="57" y="518" width="206" height="30"/>
                                 <color key="backgroundColor" red="0.73654735329999999" green="0.38463382190000001" blue="0.31130322519999998" alpha="0.44" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.73654735329999999" green="0.38463382190000001" blue="0.31130322519999998" alpha="0.44" colorSpace="calibratedRGB"/>
@@ -116,7 +116,7 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="cfD-5t-mDb" kind="modal" identifier="trans1" id="C1L-V2-5fJ"/>
+                                    <segue destination="cfD-5t-mDb" kind="modal" identifier="trans1" modalTransitionStyle="crossDissolve" id="C1L-V2-5fJ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -131,6 +131,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="dya-QR-Dy4" secondAttribute="trailing" constant="41" id="TZQ-2U-LIg"/>
                             <constraint firstItem="s60-0u-ZcW" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="61" id="cXD-DQ-Mza"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Wyh-pT-nin" secondAttribute="trailing" constant="109" id="icT-lt-QD9"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="dya-QR-Dy4" secondAttribute="bottom" constant="15" id="lY5-Hi-Vkz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="T9w-HX-FVr" secondAttribute="trailing" constant="48" id="tTH-NU-Vhq"/>
                             <constraint firstItem="Wyh-pT-nin" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="110" id="ubw-qq-fD2"/>
                             <constraint firstItem="dya-QR-Dy4" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="41" id="wzG-cC-R8m"/>
@@ -148,20 +149,21 @@
         <scene sceneID="bdb-Sl-15y">
             <objects>
                 <tableViewController id="Gjx-oz-MGf" customClass="RingScanTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="3xq-bs-wo9">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" alpha="0.79999999999999982" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" id="3xq-bs-wo9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.41505204610000002" green="0.78751349969999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.4235111708" green="0.81613005049999998" blue="0.6159927328" alpha="0.31" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DeviceCell" id="Lbq-sF-Zzr">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DeviceCell" rowHeight="60" id="Lbq-sF-Zzr">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Lbq-sF-Zzr" id="N5o-ky-gkO">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="bottom" tableViewCell="Lbq-sF-Zzr" id="N5o-ky-gkO">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="vXZ-lx-hvc" kind="modal" identifier="trans4" id="rJg-qg-xYt"/>
+                                    <segue destination="vXZ-lx-hvc" kind="modal" identifier="trans4" modalTransitionStyle="crossDissolve" id="rJg-qg-xYt"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -187,50 +189,70 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pitch" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wXv-Jc-zpW">
-                                <rect key="frame" x="147" y="71" width="40" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Volume" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RM5-mh-ag0">
+                                <rect key="frame" x="148" y="164" width="57" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Volume" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RM5-mh-ag0">
-                                <rect key="frame" x="139" y="163" width="57" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="pitch_sl" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="220" minValue="220" maxValue="880" translatesAutoresizingMaskIntoConstraints="NO" id="rxY-3K-kau">
+                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" restorationIdentifier="pitch_sl" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="220" minValue="220" maxValue="880" translatesAutoresizingMaskIntoConstraints="NO" id="rxY-3K-kau">
                                 <rect key="frame" x="108" y="109" width="118" height="31"/>
                                 <connections>
                                     <action selector="pitch_slider:" destination="cfD-5t-mDb" eventType="valueChanged" id="w8Z-J5-Gwf"/>
                                 </connections>
                             </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="vol_sl" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="11" translatesAutoresizingMaskIntoConstraints="NO" id="Rzd-J8-tqN">
+                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" restorationIdentifier="vol_sl" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="11" translatesAutoresizingMaskIntoConstraints="NO" id="Rzd-J8-tqN">
                                 <rect key="frame" x="108" y="201" width="118" height="31"/>
                                 <connections>
                                     <action selector="volume_slider:" destination="cfD-5t-mDb" eventType="valueChanged" id="VQY-VC-HtM"/>
                                 </connections>
                             </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Play" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sVF-xA-vqO">
-                                <rect key="frame" x="139" y="273" width="33" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Play" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sVF-xA-vqO">
+                                <rect key="frame" x="160" y="273" width="33" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mCb-EQ-9Aj">
-                                <rect key="frame" x="150" y="530" width="35" height="30"/>
+                            <button opaque="NO" alpha="0.89999999999999991" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mCb-EQ-9Aj">
+                                <rect key="frame" x="136" y="530" width="60" height="30"/>
+                                <color key="backgroundColor" red="0.41518669752469067" green="0.63509838535964802" blue="0.71446890782828287" alpha="0.44" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="18"/>
                                 <state key="normal" title="Back">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="vXZ-lx-hvc" kind="modal" identifier="trans2" id="OHe-Lb-Zv9"/>
+                                    <segue destination="vXZ-lx-hvc" kind="modal" identifier="trans2" modalTransitionStyle="crossDissolve" id="OHe-Lb-Zv9"/>
                                 </connections>
                             </button>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ad9-9m-YlZ">
-                                <rect key="frame" x="131" y="302" width="51" height="31"/>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ad9-9m-YlZ">
+                                <rect key="frame" x="151" y="302" width="52" height="31"/>
                             </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Pitch" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wXv-Jc-zpW">
+                                <rect key="frame" x="156" y="65" width="40" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.41505204605379409" green="0.78751349971343243" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="sVF-xA-vqO" secondAttribute="width" id="8rg-ZA-EVu"/>
+                            <constraint firstAttribute="centerX" secondItem="wXv-Jc-zpW" secondAttribute="centerX" constant="-16" id="Koi-l5-Vzf"/>
+                            <constraint firstAttribute="centerX" secondItem="sVF-xA-vqO" secondAttribute="centerX" constant="-16.5" id="Kz6-6h-t8R"/>
+                            <constraint firstAttribute="centerX" secondItem="RM5-mh-ag0" secondAttribute="centerX" constant="-16.5" id="NaT-QI-kfp"/>
+                            <constraint firstAttribute="centerX" secondItem="Rzd-J8-tqN" secondAttribute="centerX" constant="-7" id="PpS-BN-dQs"/>
+                            <constraint firstAttribute="centerX" secondItem="rxY-3K-kau" secondAttribute="centerX" constant="-7" id="U04-GT-Wfs"/>
+                            <constraint firstItem="tWY-u3-CQm" firstAttribute="top" secondItem="mCb-EQ-9Aj" secondAttribute="bottom" constant="15" id="Zbj-LZ-1zd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mCb-EQ-9Aj" secondAttribute="trailing" constant="114" id="f7f-Qo-xGh"/>
+                            <constraint firstItem="mCb-EQ-9Aj" firstAttribute="leading" secondItem="fYP-e0-rOl" secondAttribute="leadingMargin" constant="114" id="jhu-KM-cKe"/>
+                            <constraint firstAttribute="centerX" secondItem="ad9-9m-YlZ" secondAttribute="centerX" constant="-16" id="vx7-LU-HiB"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="pitchSlider" destination="rxY-3K-kau" id="YFk-tu-Hl7"/>
@@ -252,7 +274,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="OHe-Lb-Zv9"/>
+        <segue reference="rJg-qg-xYt"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>

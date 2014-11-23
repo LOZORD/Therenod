@@ -100,14 +100,9 @@ uint8_t mode = POINTER_MODE;
 -(PointerEvent *)pointerEventFired: (PointerEvent *) pointerEvent
 {
     self.numEvents++;
+    [self.time stopTimer];
     int blah = self.numEvents;
-    if(self.numEvents  == 1000)
-    {
-        [self.time stopTimer];
-        double blah1 = [self.time timeElapsedInMilliseconds];
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"%d",blah] message:[NSString stringWithFormat:@"%f",blah1] delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Say Hello",nil];
-        [alert show];
-    }
+    double blah1 = [self.time timeElapsedInMilliseconds];
     NSLog(@"This is the x value of the pointer event from %@", [pointerEvent.peripheral name]);
     NSLog(@"%hd", [pointerEvent getXValue]);
     
@@ -117,15 +112,15 @@ uint8_t mode = POINTER_MODE;
     
     //yPos += [self NodUnitToHumanUnit:[pointerEvent getYValue]];
     yPos += [pointerEvent getYValue];
-    if (yPos > 150) {
-        yPos = 150;
+    if (yPos > 300) {
+        yPos = 300;
     }
     else if (yPos < 0) {
         yPos = 0;
     }
     xPos += [pointerEvent getXValue];
-    if (xPos > 150) {
-        xPos = 150;
+    if (xPos > 300) {
+        xPos = 300;
     }
     else if(xPos < 0){
         xPos = 0;
@@ -135,7 +130,7 @@ uint8_t mode = POINTER_MODE;
     float tguVolume = [self HumanVolumeToTGVolume:[self _NodUnitToHumanUnit:yPos]];
     
     [self playSoundWithPitch:tguPitch withVolume:100.0];
-    
+    [self.time startTimer];
 //    if (take_update)
 //    {
 //        take_update = false;
@@ -155,7 +150,7 @@ uint8_t mode = POINTER_MODE;
 //huX = human unit (pitch|volume)
 - (float) _NodUnitToHumanUnit:(short int)ndu
 {
-    return ndu/1.50;
+    return ndu/3.00;
 }
 
 - (float) HumanPitchToTGPitch:(float)hup
@@ -225,7 +220,6 @@ uint8_t mode = POINTER_MODE;
     should_play = true;
     take_update = true;
     xPos = yPos = 0;
-    [self.time startTimer];
     [UIView animateWithDuration:0.3
                      animations:^{
                          _button.transform = CGAffineTransformMakeScale(1.5, 1.5);
