@@ -174,7 +174,8 @@
                             <outlet property="delegate" destination="Gjx-oz-MGf" id="Puk-lU-XDZ"/>
                         </connections>
                     </tableView>
-                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="568"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9kL-MV-42d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
