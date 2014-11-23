@@ -13,7 +13,7 @@
 @interface MainViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *button;
 @property Timer *time;
-#define CHUNK_SIZE 2
+#define CHUNK_SIZE 5
 @end
 
 @implementation MainViewController
@@ -133,8 +133,8 @@ uint8_t mode = POINTER_MODE;
     //this is done for smoothing reasons
     if (myNumEvents % CHUNK_SIZE == 0)
     {
-        int adjX = xSum / CHUNK_SIZE;
-        int adjY = ySum / CHUNK_SIZE;
+        int adjX = xSum /*/ CHUNK_SIZE*/;
+        int adjY = ySum /* CHUNK_SIZE */;
         float tguPitch  = [self HumanPitchToTGPitch:[self _NodUnitToHumanUnit:adjX]];
         float tguVolume = [self HumanVolumeToTGVolume:[self _NodUnitToHumanUnit:adjY]];
         
