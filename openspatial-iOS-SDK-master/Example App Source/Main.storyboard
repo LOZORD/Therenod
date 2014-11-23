@@ -155,13 +155,15 @@
                         <color key="backgroundColor" red="0.41505204610000002" green="0.78751349969999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.4235111708" green="0.81613005049999998" blue="0.6159927328" alpha="0.31" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DeviceCell" rowHeight="60" id="Lbq-sF-Zzr">
+                            <tableViewCell alpha="0.79999999999999982" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DeviceCell" rowHeight="60" id="Lbq-sF-Zzr">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="bottom" tableViewCell="Lbq-sF-Zzr" id="N5o-ky-gkO">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" red="0.41505204610000002" green="0.78751349969999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.41505204610000002" green="0.78751349969999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <segue destination="vXZ-lx-hvc" kind="modal" identifier="trans4" modalTransitionStyle="crossDissolve" id="rJg-qg-xYt"/>
                                 </connections>
