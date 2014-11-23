@@ -27,8 +27,10 @@
 
 - (void)viewDidLoad
 {
+    
     [self loadInitialData];
     [super viewDidLoad];
+    
 }
 
 /*
@@ -63,6 +65,7 @@
                              indexPath];
     CBPeripheral *rowElement = [self.myHIDServ.foundPeripherals objectAtIndex:indexPath.row];
     cell.textLabel.text = rowElement.name;
+    cell.backgroundColor = self.view.backgroundColor;
     return cell;
 }
 
