@@ -13,7 +13,7 @@
 @interface MainViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *button;
 @property Timer *time;
-
+#define CHUNK_SIZE 2
 @end
 
 @implementation MainViewController
@@ -129,12 +129,14 @@ uint8_t mode = POINTER_MODE;
     xSum += xPos;
     ySum += yPos;
     
-    //if we've summed 3 change vectors, send it for an update
+    //if we've summed CHUNK_SIZE change vectors, send it for an update
     //this is done for smoothing reasons
-    if (myNumEvents % 3 == 0)
+    if (myNumEvents % CHUNK_SIZE == 0)
     {
-        float tguPitch  = [self HumanPitchToTGPitch:[self _NodUnitToHumanUnit:xSum]];
-        float tguVolume = [self HumanVolumeToTGVolume:[self _NodUnitToHumanUnit:ySum]];
+        int adjX = xSum / CHUNK_SIZE;
+        int adjY = ySum / CHUNK_SIZE;
+        float tguPitch  = [self HumanPitchToTGPitch:[self _NodUnitToHumanUnit:adjX]];
+        float tguVolume = [self HumanVolumeToTGVolume:[self _NodUnitToHumanUnit:adjY]];
         
         [self playSoundWithPitch:tguPitch withVolume:100.0];
         
