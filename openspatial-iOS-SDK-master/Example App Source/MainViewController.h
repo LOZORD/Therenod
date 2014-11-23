@@ -19,13 +19,15 @@
         short int yPos;
         int xSum;
         int ySum;
-    BOOL should_play;
-    BOOL take_update;
+        int pitchIndex;
+        BOOL should_play;
+        BOOL take_update;
 }
 @property OpenSpatialBluetooth *HIDServ;
 @property CBPeripheral *lastNodPeripheral;
 @property int numEvents;
 
 -(void) startLoop;
+-(void) initDISCRETE_NOTES;
 
 @end
